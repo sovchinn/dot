@@ -16,4 +16,3 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 export GOPATH=$(go env GOPATH)
-unalias ls
