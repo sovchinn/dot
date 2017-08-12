@@ -1,4 +1,4 @@
-.PHONY: all clean config install update clean-all
+.PHONY: all clean config install update clean-all patch
 
 all: install 
 
@@ -14,7 +14,7 @@ config:
 	ln -sf $(HOME)/dot/.vim/vimrc.local $(HOME)/.config/nvim/init.vim.local 
 	ln -sf $(HOME)/dot/.vim/vimrc.local.bundles $(HOME)/.config/nvim/init.vim.local.bundles 
 
-install: clean config 
+install: clean config patch
 	@echo "Install zprezto" 
 	git clone --recursive https://github.com/sorin-ionescu/prezto.git "$(HOME)/.zprezto" 
 	ln -svf $(HOME)/dot/.zshrc $(HOME)/.zshrc 
@@ -24,7 +24,7 @@ install: clean config
 	ln -svf $(HOME)/.zprezto/runcoms/zprofile $(HOME)/.zprofile  
 	ln -svf $(HOME)/.zprezto/runcoms/zshenv $(HOME)/.zshenv  
 
-update:
+update: patch
 	@echo "Downloading new vimrc..."
 	curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=go&langs=html&langs=javascript&langs=python&editor=nvim' > $(HOME)/dot/.vim/vimrc
 	@echo "Check in changes to gh"
@@ -32,3 +32,6 @@ update:
 
 clean-all: clean
 	rm -rf $(HOME)/dot/.vim/autoload
+
+patch:
+	sed -i 's/colorscheme/silent!colorscheme/g' $(HOME)/.config/nvim/init.vim
