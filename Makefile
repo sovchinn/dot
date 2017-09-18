@@ -14,7 +14,7 @@ config:
 	ln -sf $(HOME)/dot/.vim/vimrc.local $(HOME)/.config/nvim/init.vim.local 
 	ln -sf $(HOME)/dot/.vim/vimrc.local.bundles $(HOME)/.config/nvim/init.vim.local.bundles 
 
-install: clean config patch
+install: clean config update patch
 	@echo "Install zprezto" 
 	git clone --recursive https://github.com/sorin-ionescu/prezto.git "$(HOME)/.zprezto" 
 	ln -svf $(HOME)/dot/.zshrc $(HOME)/.zshrc 
