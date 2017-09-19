@@ -11,8 +11,8 @@ clean:
 config:
 	mkdir -p $(HOME)/.config/nvim 
 	ln -sf $(HOME)/dot/.vim/vimrc $(HOME)/.config/nvim/init.vim 
-	ln -sf $(HOME)/dot/.vim/vimrc.local $(HOME)/.config/nvim/init.vim.local 
-	ln -sf $(HOME)/dot/.vim/vimrc.local.bundles $(HOME)/.config/nvim/init.vim.local.bundles 
+	ln -sf $(HOME)/dot/.vim/vimrc.local $(HOME)/.config/nvim/local_init.vim
+	ln -sf $(HOME)/dot/.vim/vimrc.local.bundles $(HOME)/.config/nvim/local_bundles.vim
 
 install: clean config update patch
 	@echo "Install zprezto" 
