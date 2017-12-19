@@ -1,0 +1,3 @@
+Plug 'Shougo/deoplete.nvim'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'ervandew/supertab'

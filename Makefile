@@ -12,8 +12,8 @@ config:
 	mkdir -p $(HOME)/.config/nvim 
 	mkdir -p $(HOME)/.vim
 	ln -sf $(HOME)/dot/.vim/nvimrc $(HOME)/.config/nvim/init.vim 
-	ln -sf $(HOME)/dot/.vim/vimrc.local $(HOME)/.config/nvim/local_init.vim
-	ln -sf $(HOME)/dot/.vim/vimrc.local.bundles $(HOME)/.config/nvim/local_bundles.vim
+	ln -sf $(HOME)/dot/.vim/nvimrc.local $(HOME)/.config/nvim/local_init.vim
+	ln -sf $(HOME)/dot/.vim/nvimrc.local.bundles $(HOME)/.config/nvim/local_bundles.vim
 
 	ln -sf $(HOME)/dot/.vim/vimrc $(HOME)/.vim/vimrc
 	ln -sf $(HOME)/dot/.vim/vimrc.local $(HOME)/.vim/vimrc.local
