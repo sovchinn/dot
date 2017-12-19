@@ -68,8 +68,8 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 let g:syntastic_html_tidy_ignore_errors = [ '<link> proprietary attribute "integrity"', '<link> proprietary attribute "crossorigin"' ]
 
 " python path setup
-let g:python3_host_prog='/usr/bin/python3'
-let g:python_host_prog='/usr/bin/python2'
+let g:python3_host_prog='/usr/local/bin/python3'
+let g:python_host_prog='/usr/local/bin/python2'
 
 " deoplete.nvim recommend
 set completeopt+=noselect
