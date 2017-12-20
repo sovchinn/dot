@@ -15,9 +15,9 @@ config:
 	ln -sf $(HOME)/dot/.vim/nvimrc.local $(HOME)/.config/nvim/local_init.vim
 	ln -sf $(HOME)/dot/.vim/nvimrc.local.bundles $(HOME)/.config/nvim/local_bundles.vim
 
-	ln -sf $(HOME)/dot/.vim/vimrc $(HOME)/.vim/vimrc
-	ln -sf $(HOME)/dot/.vim/vimrc.local $(HOME)/.vim/vimrc.local
-	ln -sf $(HOME)/dot/.vim/vimrc.local.bundles $(HOME)/.vim/vimrc.local.bundles
+	ln -sf $(HOME)/dot/.vim/vimrc $(HOME)/.vim/.vimrc
+	ln -sf $(HOME)/dot/.vim/vimrc.local $(HOME)/.vimrc.local
+	ln -sf $(HOME)/dot/.vim/vimrc.local.bundles $(HOME)/.vimrc.local.bundles
 
 	ln -svf $(HOME)/dot/.zshrc $(HOME)/.zshrc
 	ln -svf $(HOME)/dot/.zpreztorc $(HOME)/.zpreztorc
