@@ -18,7 +18,7 @@ fi
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
-prompt paradox
+prompt sorin
 
 if [[ $platform == 'linux' ]]; then
 elif [[ $platform == 'darwin' ]]; then
