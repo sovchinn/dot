@@ -17,6 +17,7 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
 fi
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+source "${ZDOTDIR:-$HOME}/dot/_helm_autocomplete"
 
 prompt sorin
 
@@ -29,3 +30,5 @@ export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 export GOPATH=$HOME/go
 
 alias vi="nvim"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
