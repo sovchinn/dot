@@ -31,5 +31,5 @@ export GOPATH=$HOME/go
 
 alias vi="nvim"
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source $HOME/.fzf/shell/key-bindings.zsh
+source $HOME/.fzf/shell/completion.zsh
