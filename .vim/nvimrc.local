@@ -54,3 +54,46 @@ let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 "let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#use_cache = 1
 let g:deoplete#sources#go#json_directory = '~/.cache/deoplete/go/$GOOS_$GOARCH'
+
+" Window resizing mappings /*{{{*/
+nnoremap <S-Up> :normal <c-r>=Resize('+')<CR><CR>
+nnoremap <S-Down> :normal <c-r>=Resize('-')<CR><CR>
+nnoremap <S-Left> :normal <c-r>=Resize('<')<CR><CR>
+nnoremap <S-Right> :normal <c-r>=Resize('>')<CR><CR>
+
+function! Resize(dir)
+  let this = winnr()
+  if '+' == a:dir || '-' == a:dir
+    execute "normal \<c-w>k"
+    let up = winnr()
+    if up != this
+      execute "normal \<c-w>j"
+      let x = 'bottom'
+    else
+      let x = 'top'
+    endif
+  elseif '>' == a:dir || '<' == a:dir
+    execute "normal \<c-w>h"
+    let left = winnr()
+    if left != this
+      execute "normal \<c-w>l"
+      let x = 'right'
+    else
+      let x = 'left'
+    endif
+  endif
+  if ('+' == a:dir && 'bottom' == x) || ('-' == a:dir && 'top' == x)
+    return "5\<c-v>\<c-w>+"
+  elseif ('-' == a:dir && 'bottom' == x) || ('+' == a:dir && 'top' == x)
+    return "5\<c-v>\<c-w>-"
+  elseif ('<' == a:dir && 'left' == x) || ('>' == a:dir && 'right' == x)
+    return "5\<c-v>\<c-w><"
+  elseif ('>' == a:dir && 'left' == x) || ('<' == a:dir && 'right' == x)
+    return "5\<c-v>\<c-w>>"
+  else
+    echo "oops. check your ~/.vimrc"
+    return ""
+  endif
+endfunction
+" /*}}}*/ 
+
