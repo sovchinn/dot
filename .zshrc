@@ -33,3 +33,7 @@ alias vi="nvim"
 
 source $HOME/.fzf/shell/key-bindings.zsh
 source $HOME/.fzf/shell/completion.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
