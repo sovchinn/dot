@@ -28,6 +28,7 @@ fi
 
 export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 export GOPATH=$HOME/go
+export EDITOR=vi
 
 alias vi="nvim"
 
