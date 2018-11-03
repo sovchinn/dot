@@ -38,3 +38,4 @@ source $HOME/.fzf/shell/completion.zsh
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
+source /usr/share/nvm/init-nvm.sh
