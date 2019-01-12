@@ -38,6 +38,8 @@ source $HOME/.fzf/shell/completion.zsh
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
-source /usr/share/nvm/init-nvm.sh
 export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+export KUBE_EDITOR=nvim
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PROMPT='$(kube_ps1)'$PROMPT

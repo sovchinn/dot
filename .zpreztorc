@@ -36,7 +36,11 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'prompt' \
-  'git'
+  'git' \
+  'autosuggestions' \
+  'completion' \
+  'contrib-kubernetes' \
+  'alias-tips'
 
 #
 # Autosuggestions
