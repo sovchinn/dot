@@ -32,6 +32,7 @@ export GOBIN=$HOME/go/bin
 export EDITOR=vi
 
 alias vi="nvim"
+alias cat="bat"
 
 source $HOME/.fzf/shell/key-bindings.zsh
 source $HOME/.fzf/shell/completion.zsh
