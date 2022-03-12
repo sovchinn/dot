@@ -24,7 +24,7 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 source "${ZDOTDIR:-$HOME}/dot/_helm_autocomplete"
 #source /usr/share/nvm/init-nvm.sh
 
-prompt sorin
+prompt paradox
 
 if [[ $platform == 'linux' ]]; then
 elif [[ $platform == 'darwin' ]]; then
@@ -51,3 +51,4 @@ alias vi="nvim"
 alias cat="bat"
 alias xclip="xclip -selection c"
 alias kb="kubectl"
+alias sidf="source "/opt/esp-idf/export.sh""
