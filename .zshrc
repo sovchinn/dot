@@ -37,15 +37,15 @@ export GOBIN=$HOME/go/bin
 export EDITOR=nvim
 export CHROME_EXECUTABLE=/usr/bin/chromium
 
-source $HOME/.fzf/shell/key-bindings.zsh
-source $HOME/.fzf/shell/completion.zsh
+source $HOME/dot/.fzf/shell/key-bindings.zsh
+source $HOME/dot/.fzf/shell/completion.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 autoload -U +X bashcompinit && bashcompinit
 export KUBE_EDITOR=nvim
 
-source $HOME/.skaffold/completion.zsh
+source $HOME/dot/.skaffold/shell/completion.zsh
 
 alias vi="nvim"
 alias cat="bat"
