@@ -34,8 +34,8 @@ install: clean update config
 
 update: 
 	@echo "Downloading new vimrc..."
-	curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=go&langs=html&langs=javascript&langs=python&editor=nvim' > $(HOME)/dot/.vim/nvimrc
-	curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=go&langs=html&langs=javascript&langs=python&editor=vim' > $(HOME)/dot/.vim/vimrc
+	curl 'https://vim-bootstrap.com/generate.vim' --data 'langs=go&langs=html&langs=javascript&langs=python&langs=typescript&frameworks=vuejs&theme=molokai&editor=nvim' > $(HOME)/dot/.vim/nvimrc
+	curl 'https://vim-bootstrap.com/generate.vim' --data 'langs=go&langs=html&langs=javascript&langs=python&langs=typescript&frameworks=vuejs&theme=molokai&editor=vim' > $(HOME)/dot/.vim/vimrc
 	@echo "Check in changes to gh"
 	@echo "Run make install to get a clean build"
 
