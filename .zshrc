@@ -21,8 +21,6 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 source "${ZDOTDIR:-$HOME}/dot/_helm_autocomplete"
 #source /usr/share/nvm/init-nvm.sh
 
-prompt paradox
-
 if [[ $platform == 'linux' ]]; then
 elif [[ $platform == 'darwin' ]]; then
     defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
