@@ -5,9 +5,6 @@ setopt autocd
 bindkey -v
 zstyle :compinstall filename '${HOME}/.zshrc'
 
-autoload -Uz compinit
-compinit
-
 platform='unknown'
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
@@ -40,9 +37,11 @@ export CHROME_EXECUTABLE=/usr/bin/chromium
 source $HOME/dot/.fzf/shell/key-bindings.zsh
 source $HOME/dot/.fzf/shell/completion.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+source $HOME/dot/zsh-z/zsh-z.plugin.zsh
+zstyle ':completion:*' menu select
 
 autoload -U +X bashcompinit && bashcompinit
+autoload -Uz compinit; compinit
 export KUBE_EDITOR=nvim
 
 source $HOME/dot/.skaffold/shell/completion.zsh
@@ -52,3 +51,6 @@ alias cat="bat"
 alias xclip="xclip -selection c"
 alias kb="kubectl"
 alias sidf="source "/opt/esp-idf/export.sh""
+
+# bun completions
+[ -s "/home/serge/.bun/_bun" ] && source "/home/serge/.bun/_bun"
