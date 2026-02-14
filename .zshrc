@@ -31,6 +31,7 @@ export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export EDITOR=nvim
 export CHROME_EXECUTABLE=/usr/bin/chromium
+export LESS="-F -g -i -M -R -S -w -X"
 
 source $HOME/dot/.fzf/shell/key-bindings.zsh
 source $HOME/dot/.fzf/shell/completion.zsh
