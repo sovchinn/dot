@@ -1,4 +1,4 @@
-" vim-bootstrap 2026-02-14 16:05:14
+" vim-bootstrap 2026-05-09 00:35:44
 
 "*****************************************************************************
 "" Vim-Plug core
@@ -193,7 +193,7 @@ set mouse=a
 
 set mousemodel=popup
 set t_Co=256
-"set guioptions=egmrti
+
 set gfn=Monospace\ 10
 
 if has("gui_running")
